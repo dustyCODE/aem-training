@@ -1,0 +1,14 @@
+<sly data-sly-use.clientLib="/libs/granite/sightly/templates/clientlib.html" data-sly-call="${clientLib.all @ categories='cacharriando.multifield.footer'}" data-sly-unwrap/>
+<div id="sites-menu">
+<p data-sly-test="${footer.text}">Testing arriba design checkbox!</p>
+<ul data-sly-use.footer="com.globant.julian.cacharriando.core.models.FooterWCMUseModel" data-sly-list="${footer.linksList}">
+<li>
+    <a target="_blank" href="${item.url}.html">${item.label}</a>
+</li> 
+</ul>
+<h1 data-sly-use.footerJS="model.js">${footerJS.checkbox}</h1>
+<p data-sly-test="${footer.checkbox}">Testing checkbox!</p>
+<p data-sly-test="${footer.checkboxDesign}">Testing design checkbox!</p>
+<p data-sly-text="${footer.text}">Testing design checkbox!</p>
+
+</div>

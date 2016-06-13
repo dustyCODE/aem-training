@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspaceFilter version="1.0">
+    <filter root="/apps/cacharriando">
+        <exclude pattern="/apps/cacharriando/install" />
+    </filter>
+    <filter root="/apps/sling" />
+    <filter root="/etc/designs/cacharriando"/>
+    <filter root="/libs/commons" />
+</workspaceFilter>

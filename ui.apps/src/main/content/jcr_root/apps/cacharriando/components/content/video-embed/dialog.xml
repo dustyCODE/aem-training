@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <tab1
+                jcr:primaryType="cq:Panel"
+                title="Configuration">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <type
+                    fieldLabel = "Type"
+                    name="./type-video" 
+                    type="combobox"
+                    xtype="selection"
+                    defaultValue="Youtube">
+                    <options jcr:primaryType="cq:WidgetCollection">
+	                    <youtube value="0" text="Youtube" jcr:primaryType="nt:unstructured"></youtube>
+	                    <vimeo value="1" text="Vimeo" jcr:primaryType="nt:unstructured"></vimeo>
+                    </options>
+                    </type>
+                    <key
+                    fieldLabel="Video key"
+                    allowBlank="false"
+                    blankText="The key is always required"
+                    name="./key-video"
+                    xtype="textfield"
+                    ></key>
+                </items>
+            </tab1>
+        </items>
+    </items>
+</jcr:root>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2016-06-07T17:43:43.389-05:00"
+        cq:lastModifiedBy="admin"
+        cq:template="/apps/cacharriando/templates/column-page-content"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Columns!"
+        sling:resourceType="cacharriando/components/structure/page">
+        <logo
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="cacharriando/components/structure/logo"/>
+        <title
+            jcr:primaryType="nt:unstructured"
+            jcr:title="Hey!"
+            sling:resourceType="cacharriando/components/content/title"/>
+        <topnav
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="cacharriando/components/structure/topnav"/>
+        <par
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/parsys">
+            <text
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="cacharriando/components/content/text"
+                text="&lt;p>This is a content page&lt;/p>"
+                textIsRich="true"/>
+            <colctrl
+                jcr:created="{Date}2016-06-07T17:38:26.124-05:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2016-06-07T17:38:44.649-05:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="cacharriando/components/content/colctrl"
+                layout="2;cq-colctrl-lt0"/>
+            <long_form_text
+                jcr:created="{Date}2016-06-07T17:38:59.084-05:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2016-06-07T17:38:59.084-05:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="acs-commons/components/content/long-form-text">
+                <long-form-text-par-0 jcr:primaryType="nt:unstructured"/>
+            </long_form_text>
+            <col_break14653391246510
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="cacharriando/components/content/colctrl"
+                controlType="break"/>
+            <image
+                jcr:created="{Date}2016-06-07T17:39:04.738-05:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2016-06-07T17:40:00.327-05:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="cacharriando/components/content/image"
+                fileReference="/content/dam/geometrixx/myImage.png"
+                imageRotate="0"/>
+            <col_end14653391061570
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="cacharriando/components/content/colctrl"
+                controlType="end"/>
+        </par>
+    </jcr:content>
+</jcr:root>

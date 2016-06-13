@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:Widget"
+    fieldLabel="Links"
+    name="./links"
+    orderable="{Boolean}true"
+    xtype="multifield">
+    <fieldConfig
+        jcr:primaryType="cq:Widget"
+        name="./multifieldpanel"
+        xtype="multifieldpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <label
+                jcr:primaryType="cq:Widget"
+                allowBlank="{Boolean}false"
+                fieldLabel="Label"
+                key="label"
+                width="250"
+                xtype="textfield"/>
+            <url
+                jcr:primaryType="cq:Widget"
+                allowBlank="{Boolean}false"
+                fieldLabel="URL"
+                key="url"
+                regex="new RegExp(&quot;^/content/cacharriando/.*&quot;)"
+                regexText="Invalid Path. Must be start with content/cacharriando"
+                rootPath="/content/cacharriando"
+                width="250"
+                xtype="pathfield"/>
+            <noFollow
+                jcr:primaryType="cq:Widget"
+                fieldLabel="Add &quot;no follow&quot;"
+                key="noFollow"
+                xtype="checkbox"/>
+        </items>
+    </fieldConfig>
+</jcr:root>

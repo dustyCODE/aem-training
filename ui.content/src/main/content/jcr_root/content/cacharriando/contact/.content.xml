@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2016-05-27T13:17:52.232-05:00"
+        cq:lastModifiedBy="admin"
+        cq:template="/apps/cacharriando/templates/page-home"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Contact!"
+        sling:resourceType="cacharriando/components/structure/page">
+        <logo
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="cacharriando/components/structure/logo"/>
+        <title
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="cacharriando/components/content/title"/>
+        <topnav
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="cacharriando/components/structure/topnav"/>
+        <par
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/parsys">
+            <text
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="cacharriando/components/content/text"
+                text="&lt;p>This is a home page&lt;/p>"
+                textIsRich="true"/>
+            <long_form_text
+                jcr:created="{Date}2016-05-27T11:44:42.242-05:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2016-05-27T11:45:56.545-05:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="acs-commons/components/content/long-form-text"
+                textIsRich="true">
+                <long-form-text-par-0 jcr:primaryType="nt:unstructured"/>
+            </long_form_text>
+        </par>
+        <image
+            jcr:lastModified="{Date}2016-05-27T13:17:52.229-05:00"
+            jcr:lastModifiedBy="admin"
+            jcr:primaryType="nt:unstructured"
+            imageRotate="0"/>
+    </jcr:content>
+</jcr:root>

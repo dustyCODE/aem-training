@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2016-06-09T12:03:39.540-05:00"
+        cq:lastModifiedBy="admin"
+        jcr:primaryType="nt:unstructured"
+        jcr:title="cacharriando Site Design!"
+        sling:resourceType="wcm/core/components/designer">
+        <page jcr:primaryType="nt:unstructured">
+            <par
+                jcr:lastModified="{Date}2016-06-07T17:25:40.099-05:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/foundation/components/parsys"
+                components="[/apps/acs-commons/components/content/long-form-text,group:cacharriando Components]">
+                <colctrl
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="cacharriando/components/content/colctrl"
+                    layouts="2;cq-colctrl-lt0&#x9;2 Columns (50%, 50%)"/>
+                <cq:authoring jcr:primaryType="nt:unstructured">
+                    <assetToComponentMapping jcr:primaryType="nt:unstructured">
+                        <image
+                            jcr:primaryType="nt:unstructured"
+                            assetGroup="media"
+                            assetMimetype="image/*"
+                            droptarget="image"
+                            resourceType="cacharriando/components/content/image"
+                            type="Images"/>
+                    </assetToComponentMapping>
+                </cq:authoring>
+                <section jcr:primaryType="nt:unstructured"/>
+                <multifield
+                    jcr:lastModified="{Date}2016-06-07T17:27:10.545-05:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="cacharriando/components/content/multifield"
+                    checkbox="true"
+                    text="design!"/>
+            </par>
+            <logo
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="cacharriando/components/structure/logo"
+                absParent="2">
+                <image/>
+            </logo>
+            <multifield
+                jcr:lastModified="{Date}2016-06-09T12:03:39.533-05:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="cacharriando/components/content/multifield"
+                links="[{&quot;label&quot;:&quot;English&quot;\,&quot;url&quot;:&quot;/content/cacharriando/en&quot;\,&quot;noFollow&quot;:true},{&quot;label&quot;:&quot;Spanish&quot;\,&quot;url&quot;:&quot;/content/cacharriando/spanish&quot;\,&quot;noFollow&quot;:true}]"
+                text="Text de diseño"/>
+        </page>
+    </jcr:content>
+    <clientlib-all/>
+    <clientlib-site/>
+    <favicon.ico/>
+</jcr:root>
