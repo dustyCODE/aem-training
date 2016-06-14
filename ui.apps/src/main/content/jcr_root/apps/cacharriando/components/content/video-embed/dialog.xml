@@ -10,24 +10,40 @@
                 jcr:primaryType="cq:Panel"
                 title="Configuration">
                 <items jcr:primaryType="cq:WidgetCollection">
+                <title jcr:primaryType="cq:Widget" 
+                		fieldLabel="Video Title"
+                		name="./title-video"
+                		xtype="textfield" />
                     <type
-                    fieldLabel = "Type"
-                    name="./type-video" 
-                    type="combobox"
-                    xtype="selection"
-                    defaultValue="Youtube">
-                    <options jcr:primaryType="cq:WidgetCollection">
-	                    <youtube value="0" text="Youtube" jcr:primaryType="nt:unstructured"></youtube>
-	                    <vimeo value="1" text="Vimeo" jcr:primaryType="nt:unstructured"></vimeo>
-                    </options>
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="default"
+                        fieldLabel="Type"
+                        name="./type-video"
+                        type="combobox"
+                        xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <youtube
+                                jcr:primaryType="nt:unstructured"
+                                text="Youtube"
+                                value="1"/>
+                            <vimeo
+                                jcr:primaryType="nt:unstructured"
+                                text="Vimeo"
+                                value="2"/>
+                            <default
+                                jcr:primaryType="nt:unstructured"
+                                text="Default"
+                                value="0"/>
+                        </options>
+                        <listeners
+                            jcr:primaryType="nt:unstructured"
+                            selectionchanged="function(field,value){Utils.VideoEmbed.events.change(field, value);}"/>
                     </type>
                     <key
-                    fieldLabel="Video key"
-                    allowBlank="false"
-                    blankText="The key is always required"
-                    name="./key-video"
-                    xtype="textfield"
-                    ></key>
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Video key"
+                        name="./key-video"
+                        xtype="textfield"/>
                 </items>
             </tab1>
         </items>

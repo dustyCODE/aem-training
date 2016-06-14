@@ -4,6 +4,11 @@ import org.junit.Before;
 import org.junit.Test;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
+
+import com.day.cq.wcm.api.designer.Cell;
+import com.day.cq.wcm.api.designer.Design;
+import com.day.cq.wcm.api.designer.Style;
+
 import static org.mockito.Mockito.*;
 
 import java.util.Collection;
@@ -13,12 +18,17 @@ import java.util.Set;
 import java.util.Map.Entry;
 
 import static org.junit.Assert.*;
+
+import org.apache.batik.css.engine.StyleDeclaration;
+import org.apache.sling.api.resource.Resource;
 import org.apache.sling.api.resource.ValueMap;
 import org.apache.sling.api.wrappers.ValueMapDecorator;
 
 public class TestVideoEmbedModel {
 
-	private ValueMap properties;
+	private ValueMap editProperties;
+	private Style designProperties;
+	private ValueMap designPropertiesMap;
 
 	@Mock
 	VideoEmbedModel embedVideo;
@@ -38,10 +48,13 @@ public class TestVideoEmbedModel {
 	public void testGetURL() throws Exception {
 
 //		properties = new ValueMapDecorator(new HashMap<String, Object>());
-		properties = new ValueMapDecorator( new HashMap<String, Object>());
-		properties.put("type-video", "Youtube");
-		properties.put("key-video", "9QS6bDH6anw");
-		when(embedVideo.getProperties()).thenReturn(properties);
+		editProperties = new ValueMapDecorator( new HashMap<String, Object>());
+		editProperties.put("type-video", "Youtube");
+		editProperties.put("key-video", "9QS6bDH6anw");
+		designPropertiesMap = new ValueMapDecorator(new HashMap<String, Object>());
+		designPropertiesMap.put("element-title", "h1");
+		when(embedVideo.getProperties()).thenReturn(editProperties);
+//		when(embedVideo.getCurrentStyle()).thenReturn();
 		embedVideo.activate();
 		String url = embedVideo.getUrl();
 		assertNotNull(url);
@@ -59,11 +72,13 @@ public class TestVideoEmbedModel {
 
 		final String typeTest = "Youtube";
 		
-		properties = new ValueMapDecorator(new HashMap<String, Object>());
-		properties.put("type-video", typeTest);
-		properties.put("key-video", "9QS6bDH6anw");
+		editProperties = new ValueMapDecorator(new HashMap<String, Object>());
+		editProperties.put("type-video", typeTest);
+		editProperties.put("key-video", "9QS6bDH6anw");
 
-		when(embedVideo.getProperties()).thenReturn(properties);
+		designProperties.put("element-title", "h1");
+		when(embedVideo.getProperties()).thenReturn(editProperties);
+		when(embedVideo.getCurrentStyle()).thenReturn(designProperties);
 
 		embedVideo.activate();
 		String type = embedVideo.getType();
@@ -84,11 +99,13 @@ public class TestVideoEmbedModel {
 
 		final String typeTest = "Vimeo";
 
-		properties = new ValueMapDecorator(new HashMap<String, Object>());
-		properties.put("type-video", typeTest);
-		properties.put("key-video", "1248955");
+		editProperties = new ValueMapDecorator(new HashMap<String, Object>());
+		editProperties.put("type-video", typeTest);
+		editProperties.put("key-video", "1248955");
 
-		when(embedVideo.getProperties()).thenReturn(properties);
+		designProperties.put("element-title", "h1");
+		when(embedVideo.getProperties()).thenReturn(editProperties);
+		when(embedVideo.getCurrentStyle()).thenReturn(designProperties);
 
 		embedVideo.activate();
 		String type = embedVideo.getType();

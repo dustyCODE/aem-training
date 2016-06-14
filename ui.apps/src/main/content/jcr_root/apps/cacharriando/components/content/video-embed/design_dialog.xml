@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:Dialog"
+    title="DesignDlg"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <tab1
+                jcr:primaryType="cq:Panel"
+                title="Tab 1">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <elementTitle
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="h1"
+                        fieldLabel="Element Title"
+                        name="./element-title"
+                        type="select"
+                        xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <h1
+                                jcr:primaryType="nt:unstructured"
+                                text="h1"
+                                value="h1"/>
+                            <h2
+                                jcr:primaryType="nt:unstructured"
+                                text="h2"
+                                value="h2"/>
+                            <h3
+                                jcr:primaryType="nt:unstructured"
+                                text="h3"
+                                value="h3"/>
+                        </options>
+                    </elementTitle>
+                </items>
+            </tab1>
+        </items>
+    </items>
+</jcr:root>
