@@ -51,8 +51,8 @@ public class TestVideoEmbedModel {
 		editProperties = new ValueMapDecorator( new HashMap<String, Object>());
 		editProperties.put("type-video", "Youtube");
 		editProperties.put("key-video", "9QS6bDH6anw");
-		designPropertiesMap = new ValueMapDecorator(new HashMap<String, Object>());
-		designPropertiesMap.put("element-title", "h1");
+//		designPropertiesMap = new ValueMapDecorator(new HashMap<String, Object>());
+//		designPropertiesMap.put("element-title", "h1");
 		when(embedVideo.getProperties()).thenReturn(editProperties);
 //		when(embedVideo.getCurrentStyle()).thenReturn();
 		embedVideo.activate();
@@ -76,9 +76,9 @@ public class TestVideoEmbedModel {
 		editProperties.put("type-video", typeTest);
 		editProperties.put("key-video", "9QS6bDH6anw");
 
-		designProperties.put("element-title", "h1");
+//		designProperties.put("element-title", "h1");
 		when(embedVideo.getProperties()).thenReturn(editProperties);
-		when(embedVideo.getCurrentStyle()).thenReturn(designProperties);
+//		when(embedVideo.getCurrentStyle()).thenReturn(designProperties);
 
 		embedVideo.activate();
 		String type = embedVideo.getType();
@@ -103,9 +103,9 @@ public class TestVideoEmbedModel {
 		editProperties.put("type-video", typeTest);
 		editProperties.put("key-video", "1248955");
 
-		designProperties.put("element-title", "h1");
+//		designProperties.put("element-title", "h1");
 		when(embedVideo.getProperties()).thenReturn(editProperties);
-		when(embedVideo.getCurrentStyle()).thenReturn(designProperties);
+//		when(embedVideo.getCurrentStyle()).thenReturn(designProperties);
 
 		embedVideo.activate();
 		String type = embedVideo.getType();
