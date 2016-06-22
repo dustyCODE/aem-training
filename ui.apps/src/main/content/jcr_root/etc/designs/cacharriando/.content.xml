@@ -2,18 +2,18 @@
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
-        cq:lastModified="{Date}2016-06-15T11:50:26.795-05:00"
+        cq:lastModified="{Date}2016-06-20T08:39:53.696-05:00"
         cq:lastModifiedBy="admin"
         jcr:primaryType="nt:unstructured"
         jcr:title="cacharriando Site Design!"
         sling:resourceType="wcm/core/components/designer">
         <page jcr:primaryType="nt:unstructured">
             <par
-                jcr:lastModified="{Date}2016-06-15T11:50:26.780-05:00"
+                jcr:lastModified="{Date}2016-06-20T08:39:53.684-05:00"
                 jcr:lastModifiedBy="admin"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="wcm/foundation/components/parsys"
-                components="[/apps/acs-commons/components/content/long-form-text,/apps/cacharriando/components/content/blog,/apps/cacharriando/components/content/helloworld,/apps/cacharriando/components/content/multifield,/apps/cacharriando/components/content/video-embed]">
+                components="[/apps/acs-commons/components/content/long-form-text,/apps/cacharriando/components/content/blog,/apps/cacharriando/components/content/helloworld,/apps/cacharriando/components/content/image,/apps/cacharriando/components/content/multifield,/apps/cacharriando/components/content/text,/apps/cacharriando/components/content/video-embed]">
                 <colctrl
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="cacharriando/components/content/colctrl"
@@ -68,4 +68,5 @@
     <clientlib-all/>
     <clientlib-site/>
     <favicon.ico/>
+    <mdl/>
 </jcr:root>

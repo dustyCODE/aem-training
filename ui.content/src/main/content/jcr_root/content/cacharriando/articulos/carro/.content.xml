@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
-    jcr:description="Template with focus on content."
-    jcr:primaryType="cq:Template"
-    jcr:title="cacharriando Site Content Page!"
-    allowedPaths="[/content/cacharriando/.+]"
-    ranking="{Long}100">
+    jcr:primaryType="cq:Page">
     <jcr:content
+        cq:lastModified="{Date}2016-06-17T07:54:45.155-05:00"
+        cq:lastModifiedBy="admin"
+        cq:template="/apps/cacharriando/templates/page-content"
         jcr:primaryType="cq:PageContent"
-        sling:resourceType="cacharriando/components/structure/page">
+        jcr:title="Carro"
+        sling:resourceType="cacharriando/components/structure/page"
+        content="This is a content page"
+        title="Hey!"
+        url="/content/cacharriando/articulos/carro">
         <logo
             jcr:primaryType="nt:unstructured"
             sling:resourceType="cacharriando/components/structure/logo"/>
@@ -20,11 +23,12 @@
             <text
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="cacharriando/components/content/text"
-                text="&lt;p>This is a content page&lt;/p>"
+                text="This is a content page"
                 textIsRich="true"/>
         </par>
         <title
             jcr:primaryType="nt:unstructured"
+            jcr:title="Hey!"
             sling:resourceType="cacharriando/components/content/title"/>
     </jcr:content>
 </jcr:root>

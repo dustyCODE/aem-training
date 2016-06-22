@@ -1,0 +1,35 @@
+.post-card.mdl-card {
+	width: 700px;
+}
+
+.blogs>h2#blog-title {
+	font-size: 18px;
+	font-weight: bold;
+}
+
+.post-image {
+	background-color: #ffffff;
+}
+
+.post-image img {
+	width: 220px;
+	height: 140px;
+	opacity: 0.4;
+	padding: 20px;
+	transition-duration: 2s;
+	transition-property: opacity;
+}
+
+.post-image img:hover {
+	opacity: 1;
+}
+
+.post-title {
+	font-size: 28px;
+	cursor: pointer;
+}
+
+.post-link {
+	color: cadetblue;
+	font-size: 12px;
+}

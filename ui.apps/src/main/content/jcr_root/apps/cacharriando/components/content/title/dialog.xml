@@ -1,23 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
     jcr:primaryType="cq:Dialog"
+    title="Title Component"
     xtype="dialog">
     <items
         jcr:primaryType="cq:Widget"
         xtype="tabpanel">
         <items jcr:primaryType="cq:WidgetCollection">
-            <config
+            <tab1
                 jcr:primaryType="cq:Panel"
-                title="Config">
+                title="Tab 1">
                 <items jcr:primaryType="cq:WidgetCollection">
-                    <path
+                    <title
                         jcr:primaryType="cq:Widget"
-                        fieldLabel="URL"
-                        name="./baseSite"
-                        rootPath="/content/cacharriando"
-                        xtype="pathfield"/>
+                        fieldDescription="Title"
+                        fieldLabel="i18n-title"
+                        name="./jcr:title"
+                        xtype="textfield"/>
                 </items>
-            </config>
+            </tab1>
         </items>
     </items>
 </jcr:root>

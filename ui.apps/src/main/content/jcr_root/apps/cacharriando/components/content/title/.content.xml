@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    cq:lastReplicated="{Date}2016-05-13T16:32:58.143-05:00"
+    cq:lastReplicatedBy="admin"
+    cq:lastReplicationAction="Activate"
+    jcr:description="This is the training title component"
+    jcr:mixinTypes="[cq:ReplicationStatus]"
     jcr:primaryType="cq:Component"
-    jcr:title="Title!"
-    sling:resourceSuperType="wcm/foundation/components/title"
-    componentGroup="cacharriando"/>
+    jcr:title="Training Title"
+    allowedParents="[*/parsys]"/>

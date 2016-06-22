@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
-    jcr:description="Template with focus on content."
-    jcr:primaryType="cq:Template"
-    jcr:title="cacharriando Site Content Page!"
-    allowedPaths="[/content/cacharriando/.+]"
-    ranking="{Long}100">
+    jcr:primaryType="cq:Page">
     <jcr:content
+        cq:lastModified="{Date}2016-06-16T09:05:11.177-05:00"
+        cq:lastModifiedBy="admin"
+        cq:template="/apps/cacharriando/templates/page-content"
         jcr:primaryType="cq:PageContent"
+        jcr:title="Colombia"
         sling:resourceType="cacharriando/components/structure/page">
         <logo
             jcr:primaryType="nt:unstructured"
@@ -22,9 +22,14 @@
                 sling:resourceType="cacharriando/components/content/text"
                 text="&lt;p>This is a content page&lt;/p>"
                 textIsRich="true"/>
+            <title
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Hey!"
+                sling:resourceType="cacharriando/components/content/title"/>
         </par>
         <title
             jcr:primaryType="nt:unstructured"
-            sling:resourceType="cacharriando/components/content/title"/>
+            jcr:title="Hey!"
+            sling:resourceType="cacharriando/components/content/training-title"/>
     </jcr:content>
 </jcr:root>

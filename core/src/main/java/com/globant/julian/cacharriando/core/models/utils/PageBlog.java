@@ -5,14 +5,11 @@ public class PageBlog {
 	private String title;
 	private String content;
 	private String imageUrl;
+	private String url;
+	
+	private static PageBlog INSTANCE;
 
-	public PageBlog() {
-	}
-
-	public PageBlog(String title, String content, String imageUrl) {
-		this.title = title;
-		this.content = content;
-		this.imageUrl = imageUrl;
+	private PageBlog() {
 	}
 
 	public PageBlog(String title, String content) {
@@ -44,9 +41,25 @@ public class PageBlog {
 		this.imageUrl = imageUrl;
 	}
 
+	public String getUrl() {
+		return url;
+	}
+
+	public void setUrl(String url) {
+		this.url = url;
+	}
+
 	@Override
 	public String toString() {
 		return "{" + "'title':'" + title + "'," + "'content':'" + content + '\'' + '}';
 	}
+	
+	
+	//singleton
+	public static PageBlog getInstance(){
+		INSTANCE = new PageBlog();
+		return INSTANCE;
+	}
+	
 
 }

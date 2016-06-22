@@ -3,4 +3,5 @@
     jcr:primaryType="cq:Component"
     jcr:title="Image!"
     sling:resourceSuperType="wcm/foundation/components/image"
+    allowParents="*/*parsys"
     componentGroup="cacharriando"/>

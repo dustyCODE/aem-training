@@ -1,16 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
-    jcr:description="Template with focus on content."
-    jcr:primaryType="cq:Template"
-    jcr:title="cacharriando Site Content Page!"
-    allowedPaths="[/content/cacharriando/.+]"
-    ranking="{Long}100">
+    jcr:primaryType="cq:Page">
     <jcr:content
+        cq:lastModified="{Date}2016-06-16T11:45:21.469-05:00"
+        cq:lastModifiedBy="admin"
+        cq:template="/apps/cacharriando/templates/page-home"
         jcr:primaryType="cq:PageContent"
+        jcr:title="Articulos"
         sling:resourceType="cacharriando/components/structure/page">
         <logo
             jcr:primaryType="nt:unstructured"
             sling:resourceType="cacharriando/components/structure/logo"/>
+        <title
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="cacharriando/components/content/title"/>
         <topnav
             jcr:primaryType="nt:unstructured"
             sling:resourceType="cacharriando/components/structure/topnav"/>
@@ -20,11 +23,16 @@
             <text
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="cacharriando/components/content/text"
-                text="&lt;p>This is a content page&lt;/p>"
+                text="&lt;p>This is a home page&lt;/p>"
                 textIsRich="true"/>
+            <blog
+                jcr:created="{Date}2016-06-16T11:45:21.467-05:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2016-06-16T11:45:21.467-05:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="cacharriando/components/content/blog"/>
         </par>
-        <title
-            jcr:primaryType="nt:unstructured"
-            sling:resourceType="cacharriando/components/content/title"/>
     </jcr:content>
+    <carro/>
 </jcr:root>

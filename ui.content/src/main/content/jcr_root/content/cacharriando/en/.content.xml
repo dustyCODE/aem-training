@@ -2,7 +2,7 @@
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
-        cq:lastModified="{Date}2016-06-14T09:32:20.665-05:00"
+        cq:lastModified="{Date}2016-06-16T11:43:32.524-05:00"
         cq:lastModifiedBy="admin"
         jcr:primaryType="nt:unstructured"
         jcr:title="English"
@@ -27,14 +27,21 @@
                 jcr:title="Service Component!"
                 sling:resourceType="cacharriando/components/content/title"
                 type="h2"/>
+            <blog
+                jcr:created="{Date}2016-06-16T11:43:32.498-05:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2016-06-16T11:43:32.498-05:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="cacharriando/components/content/blog"/>
             <video_embed
                 jcr:created="{Date}2016-06-10T11:45:20.244-05:00"
                 jcr:createdBy="admin"
-                jcr:lastModified="{Date}2016-06-14T09:32:20.658-05:00"
+                jcr:lastModified="{Date}2016-06-14T15:06:20.207-05:00"
                 jcr:lastModifiedBy="admin"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="cacharriando/components/content/video-embed"
-                key-video="223"
+                title-video="My video title"
                 type-video="Default"/>
             <servicecomponent
                 jcr:primaryType="nt:unstructured"
@@ -81,7 +88,14 @@
                 sling:resourceType="cacharriando/components/content/multifield"
                 links="[{&quot;label&quot;:&quot;English&quot;\,&quot;url&quot;:&quot;/content/cacharriando/en&quot;\\,&quot;noFollow&quot;:false},{&quot;label&quot;:&quot;French&quot;\,&quot;url&quot;:&quot;/content/cacharriando/fr&quot;\\,&quot;noFollow&quot;:false},{&quot;label&quot;:&quot;Contact&quot;\,&quot;url&quot;:&quot;/content/cacharriando/contact&quot;\\,&quot;noFollow&quot;:true}]"/>
         </multifield>
+        <blog
+            jcr:lastModified="{Date}2016-06-16T09:03:08.200-05:00"
+            jcr:lastModifiedBy="admin"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="cacharriando/components/content/blog"
+            baseSite="/content/cacharriando/en"/>
     </jcr:content>
     <articles-today/>
     <news/>
+    <colombia/>
 </jcr:root>

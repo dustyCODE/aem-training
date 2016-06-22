@@ -3,4 +3,5 @@
     jcr:primaryType="cq:Component"
     jcr:title="Text!"
     sling:resourceSuperType="wcm/foundation/components/text"
+    allowParents="*/*parsys"
     componentGroup="cacharriando"/>

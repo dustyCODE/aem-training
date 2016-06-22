@@ -36,8 +36,9 @@
     right: 1em;
 }
 
-.page__title h1 {
+.page__title h1#title-page {
     color: #025c1f;
+    font-size: 24px;
     text-transform: uppercase;
 }
 
