@@ -5,6 +5,9 @@
 **/.classpath
 */.project
 
+*.json
+*/*.json
+
 .vlt
 **/*.vlt/**
 **/*.vlt
