@@ -69,4 +69,6 @@
     <clientlib-site/>
     <favicon.ico/>
     <mdl/>
+    <bootstrap/>
+    <jquery/>
 </jcr:root>

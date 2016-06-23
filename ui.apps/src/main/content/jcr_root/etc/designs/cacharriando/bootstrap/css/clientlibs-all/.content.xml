@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:ClientLibraryFolder"
+    categories="[apps.geometrixx-media.all]"
+    embed="[cq.foundation,cq.jquery.ui,underscore,apps.geometrixx-media,personalization.core.kernel,personalization.clientcontext.kernel,personalization.stores.kernel,personalization.kernel,apps.geometrixx-media.carousel,cq.ckeditor,cq.social.hbs.qna,cq.social.author.hbs.message,cq.social.author.hbs.messagebox,cq.social.author.hbs.composemessage,cq.social.author.hbs.userchooser,cq.social.author.hbs.comments,cq.social.author.hbs.forum,cq.social.author.hbs.rating,cq.social.author.hbs.voting,cq.social.author.hbs.reviews,cq.social.author.hbs.search,apps.geometrixx-media.forum]"/>

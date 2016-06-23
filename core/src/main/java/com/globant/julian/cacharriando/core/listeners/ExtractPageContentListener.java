@@ -79,8 +79,6 @@ public class ExtractPageContentListener implements EventListener {
 
 		processEvents(events);
 
-		processEvents(events);
-
 	}
 
 	/**

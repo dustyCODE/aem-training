@@ -3,7 +3,7 @@
 		data-sly-use.blogStyle="/libs/granite/sightly/templates/clientlib.html"
 		data-sly-call="${blogStyle.all @ categories='component.blog'}"
 		data-sly-unwrap />
-	<h2 id="blog-title">Blogs</h2>
+	<h2 id="blog-title">Interesting Posts</h2>
 	<ul class="component-blogs"
 		data-sly-use.blog="com.globant.julian.cacharriando.core.models.BlogModel"
 		data-sly-list.post="${blog.posts}">
@@ -13,7 +13,6 @@
 					<a target="_blank" href="${post.url}.html">${post.title}</a>
 				</h2>
 			</div>
-
 			<div class="post-image mdl-card__media"
 				data-sly-test="${post.imageUrl}">
 				<img src="${post.imageUrl}" width="220" height="140"
