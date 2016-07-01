@@ -26,98 +26,89 @@ import org.apache.sling.api.wrappers.ValueMapDecorator;
 
 public class TestVideoEmbedModel {
 
-	private ValueMap editProperties;
-	private Style designProperties;
-	private ValueMap designPropertiesMap;
+    private ValueMap editProperties;
 
-	@Mock
-	VideoEmbedModel embedVideo;
+    @Mock
+    private VideoEmbedModel embedVideo;
 
-	@Before
-	public void setup() throws Exception {
+    @Before
+    public void setup() throws Exception {
 
-		MockitoAnnotations.initMocks(this);
-		embedVideo = mock(VideoEmbedModel.class);
-		when(embedVideo.getUrl()).thenCallRealMethod();
-		when(embedVideo.getType()).thenCallRealMethod();
-		doCallRealMethod().when(embedVideo).activate();
-	}
+        MockitoAnnotations.initMocks(this);
+        when(embedVideo.getUrl()).thenCallRealMethod();
+        when(embedVideo.getType()).thenCallRealMethod();
+        doCallRealMethod().when(embedVideo).activate();
+    }
 
-	// Probamos que sea posible obtener una URL cualquiera.
-	@Test
-	public void testGetURL() throws Exception {
+    // Probamos que sea posible obtener una URL cualquiera.
+    @Test
+    public void testGetURL() throws Exception {
 
-//		properties = new ValueMapDecorator(new HashMap<String, Object>());
-		editProperties = new ValueMapDecorator( new HashMap<String, Object>());
-		editProperties.put("type-video", "Youtube");
-		editProperties.put("key-video", "9QS6bDH6anw");
-//		designPropertiesMap = new ValueMapDecorator(new HashMap<String, Object>());
-//		designPropertiesMap.put("element-title", "h1");
-		when(embedVideo.getProperties()).thenReturn(editProperties);
-//		when(embedVideo.getCurrentStyle()).thenReturn();
-		embedVideo.activate();
-		String url = embedVideo.getUrl();
-		assertNotNull(url);
-		assertTrue(embedVideo.getUrl().length() > 0);
-	}
+        editProperties = new ValueMapDecorator(new HashMap<String, Object>());
+        editProperties.put("type-video", "Youtube");
+        editProperties.put("key-video", "9QS6bDH6anw");
+        when(embedVideo.getProperties()).thenReturn(editProperties);
 
-	/**
-	 * Metodo que prueba segun el tipo indicado que la URL embebida sea la
-	 * correspondiente...
-	 * 
-	 * @throws Exception
-	 */
-	@Test
-	public void testTypeYoutube() throws Exception {
+        embedVideo.activate();
 
-		final String typeTest = "Youtube";
-		
-		editProperties = new ValueMapDecorator(new HashMap<String, Object>());
-		editProperties.put("type-video", typeTest);
-		editProperties.put("key-video", "9QS6bDH6anw");
+        String url = embedVideo.getUrl();
+        assertNotNull(url);
+        assertTrue(embedVideo.getUrl().length() > 0);
+    }
 
-//		designProperties.put("element-title", "h1");
-		when(embedVideo.getProperties()).thenReturn(editProperties);
-//		when(embedVideo.getCurrentStyle()).thenReturn(designProperties);
+    /**
+     * Metodo que prueba segun el tipo indicado que la URL embebida sea la
+     * correspondiente...
+     *
+     * @throws Exception
+     */
+    @Test
+    public void testTypeYoutube() throws Exception {
 
-		embedVideo.activate();
-		String type = embedVideo.getType();
-		String URL = embedVideo.getUrl();
+        final String typeTest = "Youtube";
 
-		System.out.println("Type of the video for testing : " + type);
+        editProperties = new ValueMapDecorator(new HashMap<String, Object>());
+        editProperties.put("type-video", typeTest);
+        editProperties.put("key-video", "9QS6bDH6anw");
 
-		assertNotNull(type);
-		if (type.equals(typeTest)) {
-			assertTrue(URL.contains(typeTest.toLowerCase()));
-		} else {
-			throw new AssertionError();
-		}
-	}
+        when(embedVideo.getProperties()).thenReturn(editProperties);
 
-	@Test
-	public void testTypeVimeo() throws Exception {
+        embedVideo.activate();
+        String type = embedVideo.getType();
+        String URL = embedVideo.getUrl();
 
-		final String typeTest = "Vimeo";
+        System.out.println("Type of the video for testing : " + type);
 
-		editProperties = new ValueMapDecorator(new HashMap<String, Object>());
-		editProperties.put("type-video", typeTest);
-		editProperties.put("key-video", "1248955");
+        assertNotNull(type);
+        if (type.equals(typeTest)) {
+            assertTrue(URL.contains(typeTest.toLowerCase()));
+        } else {
+            throw new AssertionError();
+        }
+    }
 
-//		designProperties.put("element-title", "h1");
-		when(embedVideo.getProperties()).thenReturn(editProperties);
-//		when(embedVideo.getCurrentStyle()).thenReturn(designProperties);
+    @Test
+    public void testTypeVimeo() throws Exception {
 
-		embedVideo.activate();
-		String type = embedVideo.getType();
-		String URL = embedVideo.getUrl();
-		
-		System.out.println("Type of the video for testing : " + type);
-		assertNotNull(type);
+        final String typeTest = "Vimeo";
 
-		if (type.equals(typeTest)) {
-			assertTrue(URL.contains(typeTest.toLowerCase()));
-		} else {
-			throw new AssertionError();
-		}
-	}
+        editProperties = new ValueMapDecorator(new HashMap<String, Object>());
+        editProperties.put("type-video", typeTest);
+        editProperties.put("key-video", "1248955");
+
+        when(embedVideo.getProperties()).thenReturn(editProperties);
+
+        embedVideo.activate();
+        String type = embedVideo.getType();
+        String URL = embedVideo.getUrl();
+
+        System.out.println("Type of the video for testing : " + type);
+        assertNotNull(type);
+
+        if (type.equals(typeTest)) {
+            assertTrue(URL.contains(typeTest.toLowerCase()));
+        } else {
+            throw new AssertionError();
+        }
+    }
 }
