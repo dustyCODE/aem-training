@@ -8,9 +8,7 @@ import org.apache.sling.api.resource.Resource;
 import org.apache.sling.api.resource.ValueMap;
 import org.apache.sling.api.servlets.SlingSafeMethodsServlet;
 import org.apache.sling.commons.json.JSONArray;
-import org.apache.sling.commons.json.JSONException;
 import org.apache.sling.commons.json.JSONObject;
-import org.apache.sling.commons.json.io.JSONWriter;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -18,7 +16,6 @@ import javax.jcr.Node;
 import javax.jcr.RepositoryException;
 import javax.servlet.ServletException;
 import java.io.IOException;
-import java.io.Writer;
 import java.util.Iterator;
 
 @SlingServlet(resourceTypes = "cacharriando/components/content/blog", methods = "GET", extensions = "json")
@@ -31,8 +28,6 @@ public class BlogBuilderServlet extends SlingSafeMethodsServlet {
     @Override
     protected void doGet(SlingHttpServletRequest request, SlingHttpServletResponse response) throws ServletException, IOException {
 
-        JSONObject result = new JSONObject();
-        Writer out = response.getWriter();
         Resource resource = request.getResource();
         Node targetNode = resource.adaptTo(Node.class);
         String pagePath;
@@ -51,6 +46,7 @@ public class BlogBuilderServlet extends SlingSafeMethodsServlet {
         while (allPages.hasNext()) {
             try {
                 Page childPage = allPages.next();
+                //Important no map the resource to a Node because is a bad practice.
                 ValueMap contentNode = childPage.getContentResource().adaptTo(ValueMap.class);
                 object = new JSONObject();
                 object.put("title", contentNode.get("title", null));
@@ -64,7 +60,7 @@ public class BlogBuilderServlet extends SlingSafeMethodsServlet {
             }
         }
 
-        out.write(jsonArray.toString());
+        response.getWriter().write(jsonArray.toString());
         response.setContentType("application/json");
         response.setCharacterEncoding("UTF-8");
         response.setStatus(SlingHttpServletResponse.SC_OK);

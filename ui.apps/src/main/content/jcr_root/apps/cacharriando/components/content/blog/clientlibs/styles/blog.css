@@ -30,6 +30,15 @@ font-size: 14px !important;
 
 }
 
-.component--post-link {
+.component--post-link > span {
+
+    text-decoration: none;
+
+}
+
+
+#component--blog-title{
+
+    font-size: 14px;
 
 }

@@ -3,7 +3,6 @@
 		data-sly-use.blogStyle="/libs/granite/sightly/templates/clientlib.html"
 		data-sly-call="${blogStyle.all @ categories='component.blog'}"
 		data-sly-unwrap></sly>
-	<h2 id="component--blog-title">Interesting Posts</h2>
 	<div id="blog-parent" class="component-blogs" data-url-servlet="${currentNode.Path}.json">
 	</div>
 </div>
@@ -19,7 +18,7 @@
 		</div>
 		{{/if}}
 		<div class="component--post-content">{{{content}}}</div>
-		<p><a class="component--post-link" href="{{url}}"><span class="label label-default">More info</span></a></p>
+		<a class="component--post-link" href="{{url}}"><span class="label label-default">More info</span></a>
 	</div>
 	{{/blogs}}
 </script>
