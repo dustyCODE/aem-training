@@ -1,0 +1,2 @@
+#base=js
+handlebars-v4.0.5.js

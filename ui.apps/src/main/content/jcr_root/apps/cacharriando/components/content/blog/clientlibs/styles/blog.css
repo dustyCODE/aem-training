@@ -1,17 +1,16 @@
-.post-card.mdl-card {
-	width: 700px;
-}
-
-.blogs>h2#blog-title {
-	font-size: 18px;
+.component--post-title > a {
 	font-weight: bold;
+	cursor: pointer;
+	color: #000000;
+	text-decoration: none;
 }
 
-.post-image {
-	background-color: #ffffff;
+.component--post-image {
+    float: right;
+
 }
 
-.post-image img {
+.component--post-image > img {
 	width: 220px;
 	height: 140px;
 	opacity: 0.4;
@@ -20,16 +19,17 @@
 	transition-property: opacity;
 }
 
-.post-image img:hover {
+.component--post-image img:hover {
 	opacity: 1;
 }
 
-.post-title {
-	font-size: 28px;
-	cursor: pointer;
+
+.component--post-content > p{
+
+font-size: 14px !important;
+
 }
 
-.post-link {
-	color: cadetblue;
-	font-size: 12px;
+.component--post-link {
+
 }

@@ -1,9 +1,30 @@
-<div class="blogs">
+<div class="component-blog">
 	<sly
 		data-sly-use.blogStyle="/libs/granite/sightly/templates/clientlib.html"
 		data-sly-call="${blogStyle.all @ categories='component.blog'}"
-		data-sly-unwrap />
-	<h2 id="blog-title">Interesting Posts</h2>
+		data-sly-unwrap></sly>
+	<h2 id="component--blog-title">Interesting Posts</h2>
+	<div id="blog-parent" class="component-blogs" data-url-servlet="${currentNode.Path}.json">
+	</div>
+</div>
+<script id="sly-blog-template" type="text/x-handlebars-template">
+	{{#blogs}}
+	<div class="jumbotron">
+		<h2 class="component--post-title">
+			<a target="_blank" href="{{url}}">{{title}}</a>
+		</h2>
+		{{#if imageUrl}}
+		<div class="component--post-image">
+			<img src="{{imageUrl}}" width="220" height="140" alt="image_post">
+		</div>
+		{{/if}}
+		<div class="component--post-content">{{{content}}}</div>
+		<p><a class="component--post-link" href="{{url}}"><span class="label label-default">More info</span></a></p>
+	</div>
+	{{/blogs}}
+</script>
+<!--
+	===============Using Sling Models=============================================
 	<ul class="component-blogs"
 		data-sly-use.blog="com.globant.julian.cacharriando.core.models.BlogModel"
 		data-sly-list.post="${blog.posts}">
@@ -14,7 +35,7 @@
 				</h2>
 			</div>
 			<div class="post-image mdl-card__media"
-				data-sly-test="${post.imageUrl}">
+				data-sly-test="${'{{post.imageUrl}}'}">
 				<img src="${post.imageUrl}" width="220" height="140"
 					alt="image_post">
 			</div>
@@ -28,5 +49,4 @@
 		</div>
 		<br>
 		<br>
-	</ul>
-</div>
+	</ul> -->

@@ -1,2 +1,0 @@
-#base=scripts
-material.min.js

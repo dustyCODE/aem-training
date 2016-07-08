@@ -35,18 +35,6 @@ public class BlogModel extends WCMUse {
     private List<PageBlog> posts;
     private PageBlog post;
 
-    //TODO
-	/*
-         Crear un Sling Servlet, que no se envie como parametro la pagina actual
-		 Hacer un GET asociado al nuevo componente, configurar servlet asociado a un resourceType
-		 El servlet devuelve un JSON coom respuesta de un request AJAX
-
-		 Obtener la URL, puede ser de un data-attr en la vista para hacer la peticion.
-	 */
-
-
-    //currentNode.getPath() - obtener la ruta
-
     @Override
     public void activate() {
 

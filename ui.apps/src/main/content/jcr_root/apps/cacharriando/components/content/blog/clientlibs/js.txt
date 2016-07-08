@@ -1,1 +1,2 @@
-#base = scripts
+#base=scripts
+blog.js
